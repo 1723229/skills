@@ -1,116 +1,175 @@
-# Skill Tutorials - OpenClaw 技能教程项目
+# OpenClaw Skills - 技能仓库
 
-> 基于 PARA 方法管理的 OpenClaw 技能教程项目，包含 49+ 个技能的详细文档和源码。
+> 49个精心编写的 OpenClaw 技能，即拿即用。
 
 ---
 
-## 📁 项目结构（PARA）
+## 🎯 这是什么
 
-```
-.
-├── 01-Projects/skill-tutorials/    # 本项目主目录
-│   ├── 99-meta/                    # 项目元数据（写作规范、模板）
-│   ├── docs/                       # 项目文档（README、安装指南等）
-│   ├── scripts/                    # 自动化脚本
-│   ├── src/                        # 技能源代码
-│   │   └── extracted/skills/       # 提取的技能源码
-│   ├── tutorials/                  # 技能教程（按分类）
-│   │   ├── 01-feishu-ecosystem/    # 飞书生态技能
-│   │   ├── 02-content-generation/  # 内容生成技能
-│   │   ├── 03-data-processing/     # 数据处理技能
-│   │   ├── 04-dev-tools/           # 开发工具技能
-│   │   ├── 05-external-integrations/ # 外部集成技能
-│   │   └── 06-ai-agents/           # AI Agent 技能
-│   └── versions/                   # 教程风格版本
-└── README.md                       # 本文件
-```
+这是 **OpenClaw** 的官方技能仓库，包含 49 个可直接使用的自定义技能。
+
+每个技能都经过实战检验，配有完整的 SKILL.md 文档和使用教程。
+
+---
+
+## 📦 技能分类
+
+### 🔵 飞书生态（15个）
+| 技能 | 一句话介绍 |
+|------|-----------|
+| [feishu-doc-orchestrator](feishu-doc-orchestrator/) | Markdown一键转飞书文档 |
+| [feishu-wiki-orchestrator](feishu-wiki-orchestrator/) | 飞书知识库文档创建 |
+| [feishu-chat-extractor](feishu-chat-extractor/) | 群聊消息提取和分析 |
+| [feishu-chat-monitor](feishu-chat-monitor/) | 群聊监控，自动响应 |
+| [feishu-pdf-downloader](feishu-pdf-downloader/) | 飞书云盘PDF下载 |
+| [feishu-doc-perm](feishu-doc-perm/) | 文档权限管理 |
+| [feishu-voice-sender](feishu-voice-sender/) | 发送语音消息 |
+| [feishu-video-sender](feishu-video-sender/) | 发送视频消息 |
+| [feishu-card-parser](feishu-card-parser/) | 卡片消息解析 |
+| [feishu-group-welcome](feishu-group-welcome/) | 群聊新成员欢迎 |
+| [feishu-message-recall](feishu-message-recall/) | 消息撤回工具 |
+| [feishu-doc-converter](feishu-doc-converter/) | 文档格式转换 |
+| [feishu-doc-creator](feishu-doc-creator/) | 文档创建统一入口 |
+| [feishu-doc](feishu-doc/) | 飞书文档读取 |
+| [feishu-bitable-field](feishu-bitable-field/) | 多维表格字段管理 |
+
+### 🎨 内容生成（10个）
+| 技能 | 一句话介绍 |
+|------|-----------|
+| [video-generation](video-generation/) | 视频生成和超分 |
+| [zhuoran-selfie](zhuoran-selfie/) | 卓然自拍照片生成 |
+| [zhuoran-video-selfie](zhuoran-video-selfie/) | 卓然自拍视频生成 |
+| [qizhuo-selfie](qizhuo-selfie/) | 奇卓自拍照片生成 |
+| [clawra-selfie](clawra-selfie/) | Clawra自拍照片生成 |
+| [clawra-video-selfie](clawra-video-selfie/) | Clawra自拍视频生成 |
+| [baoyu-slide-deck](baoyu-slide-deck/) | 幻灯片自动生成 |
+| [long-form-writer](long-form-writer/) | AI写作助手，从提纲到长文 |
+| [infographic-generator](infographic-generator/) | 信息大图生成 |
+| [md-to-wechat](md-to-wechat/) | Markdown转微信公众号 |
+
+### 📊 数据处理（8个）
+| 技能 | 一句话介绍 |
+|------|-----------|
+| [document-hub](document-hub/) | 文档处理中心 |
+| [pdf](pdf/) | PDF处理全能工具 |
+| [image-ocr](image-ocr/) | 图片文字识别 |
+| [content-extractor](content-extractor/) | 多平台内容抓取 |
+| [wechat-article-fetcher](wechat-article-fetcher/) | 微信文章抓取 |
+| [twitter-scraper](twitter-scraper/) | Twitter数据抓取 |
+| [rss-feed](rss-feed/) | RSS订阅处理 |
+| [logic-validator](logic-validator/) | 逻辑验证工具 |
+
+### 🛠️ 开发工具（5个）
+| 技能 | 一句话介绍 |
+|------|-----------|
+| [gh-cli](gh-cli/) | GitHub CLI完整指南 |
+| [remotion-best-practices](remotion-best-practices/) | Remotion视频最佳实践 |
+| [calendar](calendar/) | 日历管理集成 |
+| [find-skills](find-skills/) | 技能发现和安装 |
+| [smart-shopping](smart-shopping/) | 智能购物助手 |
+
+### 🔗 外部集成（6个）
+| 技能 | 一句话介绍 |
+|------|-----------|
+| [bright-data](bright-data/) | Bright Data爬虫API |
+| [amap-navigator](amap-navigator/) | 高德地图导航服务 |
+| [media_hub](media_hub/) | 音视频处理中心 |
+| [whisper-stt](whisper-stt/) | 本地语音转文字 |
+| [voice-clone](voice-clone/) | 声音克隆和语音生成 |
+| [rss-feed](rss-feed/) | RSS订阅处理 |
+
+### 🤖 AI Agent（5个）
+| 技能 | 一句话介绍 |
+|------|-----------|
+| [security-hardening](security-hardening/) | 系统安全加固 |
+| [skill-security-audit](skill-security-audit/) | 技能安全审计 |
+| [secure-key-manager](secure-key-manager/) | 安全密钥管理 |
+| [security-drill](security-drill/) | 安全演练工具 |
+| [logic-validator](logic-validator/) | 逻辑验证工具 |
 
 ---
 
 ## 🚀 快速开始
 
-### 方式1：克隆整个项目
+### 方式1：直接丢链接给 OpenClaw
+
+告诉你的 OpenClaw Agent：
+
+```
+学习这个技能：https://github.com/wulaosiji/skills/tree/main/feishu-doc-orchestrator
+```
+
+Agent 会自动读取 SKILL.md，完成安装并返回确认。
+
+### 方式2：手动安装
 
 ```bash
+# 克隆仓库
 git clone https://github.com/wulaosiji/skills.git
-cd skills/01-Projects/skill-tutorials
+
+# 复制需要的技能
+cp -r skills/feishu-doc-orchestrator ~/.openclaw/workspace/skills/
+
+# 验证安装
+ls ~/.openclaw/workspace/skills/feishu-doc-orchestrator/
+# 应该看到：SKILL.md  scripts/  templates/
 ```
 
-### 方式2：使用 OpenClaw 安装
+---
 
-告诉 OpenClaw：
+## 📚 深度教程
+
+每个技能都有完整的深度教程，包含：
+- 10个标准章节（概述、安装、核心概念、快速开始、详细用法、示例代码、最佳实践、故障排除、参考链接）
+- 真实的踩坑经验
+- 3个层次的示例代码（基础/进阶/完整工作流）
+
+教程位置：`01-Projects/skill-tutorials/tutorials/`
+
+---
+
+## 🛠️ 技能结构
+
+每个技能目录包含：
+
 ```
-请帮我从 https://github.com/wulaosiji/skills 安装 feishu-doc-orchestrator 技能
+skill-name/
+├── SKILL.md              # 技能说明文档
+├── scripts/              # 可执行脚本
+├── templates/            # 模板文件（可选）
+└── ...                   # 其他资源
 ```
 
 ---
 
-## 📚 内容导航
+## 📊 统计
 
-| 目录 | 内容 | 数量 |
-|------|------|------|
-| [tutorials/01-feishu-ecosystem](tutorials/01-feishu-ecosystem/) | 飞书生态技能（文档创建、消息发送等） | 15 个 |
-| [tutorials/02-content-generation](tutorials/02-content-generation/) | 内容生成技能（视频、图片、写作） | 13 个 |
-| [tutorials/03-data-processing](tutorials/03-data-processing/) | 数据处理技能（PDF、OCR、爬取） | 8 个 |
-| [tutorials/04-dev-tools](tutorials/04-dev-tools/) | 开发工具技能（GitHub、日历等） | 6 个 |
-| [tutorials/05-external-integrations](tutorials/05-external-integrations/) | 外部集成技能（地图、语音等） | 5 个 |
-| [tutorials/06-ai-agents](tutorials/06-ai-agents/) | AI Agent 技能（安全、审计等） | 4 个 |
-
----
-
-## 📝 写作规范
-
-查看 [99-meta/WRITING_STANDARD.md](99-meta/WRITING_STANDARD.md) 了解教程写作标准。
-
-所有教程遵循统一的9章节结构：
-1. 概述（功能简介、适用场景、依赖要求）
-2. 安装配置（环境检查、安装步骤、配置文件）
-3. 核心概念（架构图、关键术语、工作流程）
-4. 快速开始（最小可用示例）
-5. 详细用法（功能点详解、API说明）
-6. 示例代码（基础+进阶+生产级）
-7. 最佳实践（性能、安全、常见陷阱）
-8. 故障排除（错误场景、诊断步骤、解决方案）
-9. 参考链接（源码路径、相关技能、外部文档）
+- **总技能数**: 49个
+- **飞书生态**: 15个
+- **内容生成**: 10个
+- **数据处理**: 8个
+- **开发工具**: 5个
+- **外部集成**: 6个
+- **AI Agent**: 5个
 
 ---
 
-## 🛠️ 技能源码
+## 🤝 贡献指南
 
-所有技能源码位于 `src/extracted/skills/` 目录下，每个技能包含：
-- `SKILL.md` - 技能说明文档
-- `scripts/` - 可执行脚本
-- 其他资源文件
+1. Fork 本仓库
+2. 创建你的技能目录
+3. 编写 SKILL.md 和脚本
+4. 提交 PR
 
----
-
-## 📊 项目统计
-
-- **总技能数**: 49+
-- **教程文档**: 49 篇
-- **源码文件**: 1200+ 个
-- **代码行数**: 53,000+ 行
-
----
-
-## 🤝 使用建议
-
-### 对于普通用户
-1. 浏览 `tutorials/` 找到需要的技能
-2. 阅读对应教程了解使用方法
-3. 复制源码或让 OpenClaw 自动安装
-
-### 对于开发者
-1. 参考 `99-meta/WRITING_STANDARD.md` 编写新教程
-2. 使用 `scripts/` 中的工具批量生成文档
-3. 提交 PR 贡献新技能或改进现有教程
+详细规范请参考 `01-Projects/skill-tutorials/docs/writing_standard_final.md`
 
 ---
 
 ## 📄 许可证
 
-MIT License - 详见 LICENSE 文件
+MIT License
 
 ---
 
-*最后更新: 2026-02-28*
+*最后更新: 2026-03-01*  
+*维护者: Skill Tutorials 项目组*
