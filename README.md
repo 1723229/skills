@@ -110,10 +110,10 @@ Agent 会自动读取 SKILL.md，完成安装并返回确认。
 git clone https://github.com/wulaosiji/skills.git
 
 # 复制需要的技能
-cp -r skills/feishu-doc-orchestrator ~/.openclaw/workspace/skills/
+cp -r skills/feishu-doc-orchestrator ~/.nanobot/workspace/skills/
 
 # 验证安装
-ls ~/.openclaw/workspace/skills/feishu-doc-orchestrator/
+ls ~/.nanobot/workspace/skills/feishu-doc-orchestrator/
 # 应该看到：SKILL.md  scripts/  templates/
 ```
 
